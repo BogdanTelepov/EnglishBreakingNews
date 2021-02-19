@@ -20,7 +20,7 @@ import kotlinx.coroutines.launch
 import retrofit2.Response
 import java.io.IOException
 
-class NewsViewModel(val newsRepository: NewsRepository, application: Application) :
+class NewsViewModel(private val newsRepository: NewsRepository, application: Application) :
     AndroidViewModel(application) {
 
     val breakingNews: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
